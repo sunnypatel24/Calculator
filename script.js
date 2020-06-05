@@ -1,8 +1,10 @@
 const container = document.getElementById("container");
 for (let i = 0; i <= 9; i++) {
     let digit = document.createElement("div");
-    digit.classList.add("digit-" + i);
-    digit.innerHTML = i;
+    let digitButton = document.createElement("button");
+    digitButton.classList.add("digit-" + i);
+    digitButton.innerHTML = i;
+    digit.appendChild(digitButton);
     container.appendChild(digit);
 }
 

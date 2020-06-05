@@ -10,11 +10,96 @@ body {
 
 #container {
     position: relative;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 600px;
     margin-right: 600px;
+    height: 300px;
     border: solid black;
     border-radius: 10px;
     border-width: 5px;
 }
 
+button:hover {
+    background-color: rgb(58, 134, 221);
+}
+
+button:active {
+  background-color: rgb(58, 134, 221);
+  transform: translateY(4px);
+}
+
+button {
+    display: inline-block;
+    position: relative;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    width: 50px;
+    height: 50px;
+}
+
+#clear {
+    left: 80px;
+    top: 250px;
+}
+
+#add {
+    top: 10px;
+}
+
+#subtract {
+    left: 400px;
+    top: 50px;
+}
+
+#multiply {
+    left: 400px;
+    top: -70px;
+}
+
+#divide {
+    left: 400px;
+}
+
+#equals {
+    left: 145px;
+}
+
+.digit-0 {
+    top: -50px;
+}
+
+.digit-1 {
+    
+}
+
+.digit-2 {
+    
+}
+
+.digit-3 {
+    
+}
+
+.digit-4 {
+    
+}
+
+.digit-5 {
+    
+}
+
+.digit-6 {
+    
+}
+
+.digit-7 {
+    
+}
+
+.digit-8 {
+    
+}
+
+.digit-9 {
+    
+}
