@@ -1,6 +1,9 @@
 const container = document.getElementById("container");
-for (let i = 0; i < 16; i++) {
-    
+for (let i = 0; i <= 9; i++) {
+    let digit = document.createElement("div");
+    digit.classList.add("digit-" + i);
+    digit.innerHTML = i;
+    container.appendChild(digit);
 }
 
 function add(num1, num2) {
