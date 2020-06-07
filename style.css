@@ -27,6 +27,13 @@ body {
     border-radius: 5px;
 }
 
+#nums {
+    position: relative;
+    font-size: 30px;
+    text-align: right;
+    bottom: 830px;
+}
+
 button:hover {
     background-color: rgb(58, 134, 221);
 }
