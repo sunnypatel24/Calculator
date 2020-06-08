@@ -19,6 +19,7 @@ let operator = "";
 let num1 = "";
 let num2 = "";
 let numCount = 1;
+let pastFirstOperation = false;
 
 for (let i = 0; i <= 9; i++) {
     let digit = document.createElement("div");
@@ -71,6 +72,13 @@ for (let i = 0; i < digit9.length; i++) {
 
 function addOperator() {
     numCount++;
+    if (pastFirstOperation) {
+        if (num2 != "") {
+            displayResult();
+        }
+    } else {
+        pastFirstOperation = true;    
+    }
     operator = "add";
     let removeNum = document.getElementById("nums");
     while (removeNum.hasChildNodes()) {
@@ -80,6 +88,13 @@ function addOperator() {
 
 function subtractOperator() {
     numCount++;
+    if (pastFirstOperation) {
+        if (num2 != "") {
+            displayResult();
+        }
+    } else {
+        pastFirstOperation = true;    
+    }
     operator = "subtract";
     let removeNum = document.getElementById("nums");
     while (removeNum.hasChildNodes()) {
@@ -89,6 +104,13 @@ function subtractOperator() {
 
 function multiplyOperator() {
     numCount++;
+    if (pastFirstOperation) {
+        if (num2 != "") {
+            displayResult();
+        }
+    } else {
+        pastFirstOperation = true;    
+    }
     operator = "multiply";
     let removeNum = document.getElementById("nums");
     while (removeNum.hasChildNodes()) {
@@ -98,6 +120,13 @@ function multiplyOperator() {
 
 function divideOperator() {
     numCount++;
+    if (pastFirstOperation) {
+        if (num2 != "") {
+            displayResult();
+        }
+    } else {
+        pastFirstOperation = true;    
+    }
     operator = "divide";
     let removeNum = document.getElementById("nums");
     while (removeNum.hasChildNodes()) {
@@ -154,6 +183,7 @@ function clearMem() {
     num2 = "";
     numCount = 1;
     operator = "";
+    pastFirstOperation = false;
 }
 
 function display0() {
@@ -282,6 +312,7 @@ function displayResult() {
         removeNum.removeChild(removeNum.firstChild);
     }
     let result = operate();
+    result = result.toFixed(2);
     let num = document.getElementById("nums");
     let node = document.createTextNode(result + "");
     num.appendChild(node);
